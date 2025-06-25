@@ -1,0 +1,270 @@
+/* Background for whole page */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* App Container */
+.app-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 50px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  min-height: 80vh;
+}
+
+/* Title */
+.app-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Description */
+.app-description {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #e0e0e0;
+  margin: 20px auto 40px auto;
+  max-width: 700px;
+  line-height: 1.7;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Strong text inside description (like "How to use") */
+.app-description strong {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #a3d9ff; /* soft blue accent */
+  display: block; /* block to separate line */
+  margin-bottom: 15px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Divider */
+.divider {
+  margin: 40px 0;
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Flowchart layout */
+.flowchart-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+/* Flowchart container */
+.flowchart-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+/* Each step */
+.flowchart-step {
+  display: flex;
+  align-items: center;
+}
+
+.flowchart-box {
+  padding: 20px 34px;
+  background-color: #f9f9f9;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #333;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  min-width: 150px;
+  text-align: center;
+  flex-shrink: 0;
+  user-select: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.flowchart-box:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  background-color: #e8f5e9;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 36px;
+  font-weight: bold;
+  color: #4caf50;
+  padding: 0 8px;
+  user-select: none;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #388e3c;
+}
+
+/* Button container */
+.button-container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  height: 50px;
+}
+
+/* Upload container */
+.upload-btn-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* Show jobs button container */
+.show-jobs-btn-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Upload input */
+.upload-input {
+  padding: 10px;
+  border: 2px solid #61dafb;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 300px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.upload-input:hover {
+  border-color: #21a1f1;
+}
+
+/* Upload button */
+.upload-button {
+  padding: 10px 25px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: auto; /* auto width to fit content */
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  font-size: 1rem;
+  min-width: 130px; /* ensure minimum width so button isn’t too narrow */
+}
+
+.upload-button:disabled {
+  background-color: #a0cfff;
+  cursor: not-allowed;
+}
+
+.upload-button:not(:disabled):hover {
+  background-color: #21a1f1;
+}
+
+/* All jobs button */
+.show-all-jobs-btn {
+  background-color: #28a745;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  width: 240px; /* Increased width for one-line text */
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
+}
+
+.show-all-jobs-btn a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.show-all-jobs-btn:hover {
+  background-color: #218838;
+  transform: scale(1.04);
+  box-shadow: 0 8px 16px rgba(33, 136, 56, 0.7);
+}
+
+.show-all-jobs-btn .fa {
+  margin-right: 6px;
+  font-size: 1.1rem;
+}
+
+/* FontAwesome icons */
+.upload-button .fa,
+.show-all-jobs-btn .fa {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+/* Instructions list */
+.app-description ul {
+  list-style-type: disc;
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 24px;
+  font-size: 1.05rem;
+  color: #ccc;
+}
+
+.app-description ul li {
+  margin-bottom: 12px;
+}
+
+/* Error message */
+.error-message {
+  color: #d9534f;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.error-message i {
+  color: #d9534f;
+  font-size: 1.2rem;
+}

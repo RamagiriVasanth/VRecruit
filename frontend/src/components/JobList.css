@@ -1,0 +1,67 @@
+/* Job List container styles */
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+/* Matched Jobs Heading */
+.matched-jobs-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #eee; /* Light color for visibility on dark backgrounds */
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.matched-jobs-icon {
+  margin-right: 10px;
+  color: #4CAF50; /* Green color for search icon */
+}
+
+/* No Jobs section styles */
+.no-jobs-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.no-jobs-icon, .upload-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #FF6347; /* Tomato color for sad/ upload icon */
+}
+
+.upload-icon {
+  color: #FFD700; /* Gold color for upload icon */
+}
+
+/* For the no matching jobs found or upload resume text */
+.no-jobs-message p {
+  font-size: 1.1rem;
+  color: #eee; /* Changed to light color for visibility on dark backgrounds */
+  text-align: center;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+  .job-list {
+    padding: 0 10px;
+  }
+
+  .matched-jobs-heading {
+    font-size: 1.2rem;
+  }
+
+  .no-jobs-message p {
+    font-size: 1rem;
+  }
+}
