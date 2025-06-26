@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import JobList from './JobList';
 import axios from 'axios';
-
+import BASE_URL from '../config';
 const AllJobs = () => {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Correct API endpoint to fetch all jobs
-    axios.get('http://localhost:5000/jobs/all')
+    axios.get(`${BASE_URL}/jobs/all`)
       .then(res => {
         setJobs(res.data.jobs); // Ensure we're extracting the jobs from the response
         setLoading(false);

@@ -1,7 +1,7 @@
 import './UploadResume.css';
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import BASE_URL from '../config';
 const UploadResume = ({ onMatches, onResumeUploaded }) => {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -26,7 +26,7 @@ const UploadResume = ({ onMatches, onResumeUploaded }) => {
 
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/jobs/match', formData, {
+      const res = await axios.post(`${BASE_URL}/jobs/match`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       onMatches(res.data.matches);
