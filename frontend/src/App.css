@@ -268,3 +268,106 @@ body {
   color: #d9534f;
   font-size: 1.2rem;
 }
+/* Existing styles remain unchanged above... */
+
+/* ========== Responsive adjustments for mobile ========== */
+@media (max-width: 768px) {
+  /* Flowchart becomes vertical */
+/* Flowchart becomes vertical */
+.flowchart-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* Stack each step vertically: box then arrow */
+.flowchart-step {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+  .arrow {
+    transform: rotate(90deg);
+    font-size: 28px;
+    padding: 10px 0;
+  }
+
+  .flowchart-box {
+    min-width: 220px;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  /* Center button container and its children */
+  .button-container {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .upload-btn-container,
+  .show-jobs-btn-container {
+    position: static;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .upload-input,
+  .upload-button,
+  .show-all-jobs-btn {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .show-all-jobs-btn {
+    margin-top: 10px;
+  }
+
+  .app-description {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  .app-title {
+    font-size: 2.2rem;
+  }
+}
+.upload-btn-container {
+  order: 2;
+}
+
+.show-jobs-btn-container {
+  order: 1;
+  margin-bottom: 15px;
+}
+
+  .upload-btn-container {
+    order: 2;
+    width: 100%;             /* Make it full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Center children horizontally */
+    justify-content: center; /* Center children vertically (optional) */
+  }
+
+  .upload-input,
+  .upload-button {
+    width: 90%;          /* already set */
+    max-width: 300px;
+    text-align: center;  /* Center text inside inputs/buttons */
+    margin: 0 auto;      /* Center elements horizontally */
+  }
+
+  /* Remove any margin-bottom or padding that could push it off center */
+  .upload-button {
+    margin-top: 10px;    /* space between input and button */
+  }

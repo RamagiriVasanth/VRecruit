@@ -65,3 +65,29 @@
   color: #d9534f;
   font-size: 1.2rem;
 }
+.upload-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap; /* horizontal by default */
+}
+
+/* On mobile: stack vertically */
+@media (max-width: 768px) {
+  .upload-row {
+    flex-direction: column;
+    align-items: flex-start; /* align left */
+  }
+
+  /* Make input and button full width or close */
+  .upload-input {
+    width: 100%;  /* input takes full width on mobile */
+    max-width: 300px; /* optional max width */
+  }
+
+  .upload-button {
+    width: 100%;  /* button full width too */
+    max-width: 300px; /* optional */
+    margin-top: 10px; /* space above button */
+  }
+}

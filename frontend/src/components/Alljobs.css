@@ -1,0 +1,38 @@
+.all-jobs-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+  color: #fff; /* match your app */
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #61dafb;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 0;
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.back-button:hover {
+  color: #21a1f1;
+}
+
+.back-button:focus {
+  outline: 2px solid #61dafb;
+  outline-offset: 2px;
+}
+
+.all-jobs-title {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: left;
+}
